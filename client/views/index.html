@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>christian-wirt</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/dark-mode.css">
+    <link rel="stylesheet" href="stylesheets/logo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&&family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="black-mode dark-mode" onload="getDateTime()">
+
+    <!--Navbar-->
+    <div id="nav-div" class="nav-wrapper-collapsed">
+        <ul class="navbar dark-mode black-mode">
+            <div class="nav-section nav-1 dark-mode black-mode underline-hover">
+                <li class="expand-button"><a id="toggleNav" href="#"><img src="images/menu.svg" width="30px" height="30px"></a></li>
+                <li><a href="#whereIBegan">Where I Began</a></li>
+                <li><a href="#experience">My Experience</a></li>
+                <li><a href="#createUser">Create a User</a></li>
+                <li><a href="javascript:;" id="darkMode">Light Mode</a></li>
+            </div>
+            <div class="nav-section nav-2">
+                <li><a href="https://github.com/christian-wirt" target="_blank"><img src="images/github.svg" alt="Github" width="30" height="30"></a></li>
+                <li><a href="https://www.facebook.com/christian.wirt/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="30" height="30"></a></li>
+                <li><a href="https://www.linkedin.com/in/christian-wirt-59107b1a3/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30"></a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="header dark-mode black-mode">
+        <div style="max-width: 1068px; margin: 20px;">
+            <svg id="logo" width="100%" height="110" viewBox="0 0 835 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M49.02 109.98C33.3267 109.98 21.3 104.993 12.94 95.02C4.72666 85.0467 0.619995 72.2867 0.619995 56.74C0.619995 41.1933 4.79999 28.4333 13.16 18.46C21.52 8.34 33.62 3.28 49.46 3.28C59.58 3.28 67.7933 5.26 74.1 9.21999C80.5533 13.0333 83.78 18.0933 83.78 24.4C83.78 30.56 81.2133 35.4 76.08 38.92C70.9467 42.44 64.4933 44.2 56.72 44.2C61.12 39.5067 63.32 33.1267 63.32 25.06C63.32 20.3667 61.8533 16.48 58.92 13.4C56.1333 10.1733 52.4667 8.56 47.92 8.56C39.56 8.56 33.4 13.3267 29.44 22.86C25.6267 32.3933 23.72 43.6867 23.72 56.74C23.72 65.1 24.8933 72.7267 27.24 79.62C29.7333 86.5133 33.2533 92.0133 37.8 96.12C42.4933 100.08 47.8467 102.06 53.86 102.06C60.7533 102.06 66.4733 100.667 71.02 97.88C75.7133 94.9467 79.9667 90.9133 83.78 85.78L86.42 87.76C82.46 94.36 77.3267 99.7133 71.02 103.82C64.86 107.927 57.5267 109.98 49.02 109.98Z" stroke="white" stroke-width="1"/>
+                <path d="M154.189 95.46C154.189 99.86 155.582 102.06 158.369 102.06C161.155 102.06 163.869 100.96 166.509 98.76L168.269 100.96C162.842 106.973 156.462 109.98 149.129 109.98C143.849 109.98 140.035 108.66 137.689 106.02C135.489 103.233 134.389 98.76 134.389 92.6V58.94C134.389 50.4333 131.675 46.18 126.249 46.18C120.969 46.18 116.715 49.7733 113.489 56.96C110.262 64.1467 108.649 73.5333 108.649 85.12C108.649 89.6667 108.942 93.3333 109.529 96.12C110.262 98.76 111.435 101.253 113.049 103.6L114.809 105.8L113.049 108H81.1486L79.8286 104.26L82.9086 103.6C85.2553 103.013 86.7953 102.133 87.5286 100.96C88.2619 99.64 88.6286 97.1467 88.6286 93.48V14.94C88.6286 13.7667 88.3353 12.8133 87.7486 12.08C87.3086 11.3467 86.6486 10.98 85.7686 10.98H78.9486L78.0686 8.77999C80.8553 6.14 84.4486 4.08666 88.8486 2.61999C93.3953 1.00666 97.8686 0.199997 102.269 0.199997C104.175 0.199997 105.715 0.639997 106.889 1.51999C108.062 2.25333 108.649 3.35333 108.649 4.82V59.16C110.702 52.2667 114.295 46.5467 119.429 42C124.709 37.3067 130.282 34.96 136.149 34.96C142.455 34.96 147.002 37.0133 149.789 41.12C152.722 45.2267 154.189 51.7533 154.189 60.7V95.46Z" stroke="white" stroke-width="1"/>
+                <path d="M209.534 34.96C214.227 34.96 218.041 36.3533 220.974 39.14C223.907 41.78 225.374 45.2267 225.374 49.48C225.374 53.44 224.201 56.6667 221.854 59.16C219.507 61.5067 216.427 62.68 212.614 62.68C209.681 62.68 206.967 62.0933 204.474 60.92C207.114 58.72 208.434 55.42 208.434 51.02C208.434 48.9667 207.994 47.3533 207.114 46.18C206.234 45.0067 205.061 44.42 203.594 44.42C200.074 44.42 197.141 48.0133 194.794 55.2C192.447 62.24 191.274 71.04 191.274 81.6C191.274 87.0267 191.567 91.3533 192.154 94.58C192.887 97.8067 194.061 100.813 195.674 103.6L197.434 105.8L195.674 108H163.774L162.454 104.26L165.534 103.6C167.881 103.013 169.421 102.133 170.154 100.96C170.887 99.64 171.254 97.1467 171.254 93.48V50.58C171.254 47.7933 170.301 46.4 168.394 46.4H161.574L160.694 43.98C163.481 41.4867 166.927 39.4333 171.034 37.82C175.287 36.2067 179.467 35.4 183.574 35.4C185.481 35.4 187.021 35.84 188.194 36.72C189.367 37.6 189.954 38.7733 189.954 40.24V56.3H190.614C193.694 42.0733 200.001 34.96 209.534 34.96Z" stroke="white" stroke-width="1"/>
+                <path d="M245.918 95.46C245.918 99.86 247.312 102.06 250.098 102.06C252.885 102.06 255.598 100.96 258.238 98.76L259.998 100.96C254.572 106.973 248.192 109.98 240.858 109.98C235.578 109.98 231.765 108.66 229.418 106.02C227.072 103.233 225.898 98.76 225.898 92.6V49.04C225.898 46.9867 224.945 45.96 223.038 45.96H216.218L215.558 43.54C218.492 41.0467 222.158 38.9933 226.558 37.38C230.958 35.7667 235.358 34.96 239.758 34.96C241.518 34.96 242.985 35.4 244.158 36.28C245.332 37.16 245.918 38.3333 245.918 39.8V95.46ZM223.698 13.84C223.698 11.2 225.165 8.26666 228.098 5.04C231.032 1.81333 233.745 0.199997 236.238 0.199997C238.878 0.199997 241.665 1.81333 244.598 5.04C247.678 8.26666 249.218 11.2 249.218 13.84C249.218 16.6267 247.678 19.6333 244.598 22.86C241.665 25.94 238.878 27.48 236.238 27.48C233.745 27.48 231.032 25.94 228.098 22.86C225.165 19.6333 223.698 16.6267 223.698 13.84Z" stroke="white" stroke-width="1"/>
+                <path d="M273.399 49.92C273.399 53.5867 274.793 56.5933 277.579 58.94C280.513 61.14 284.913 63.6333 290.779 66.42C295.619 68.7667 299.359 70.82 301.999 72.58C304.639 74.1933 306.913 76.3933 308.819 79.18C310.873 81.9667 311.899 85.2667 311.899 89.08C311.899 95.3867 308.893 100.447 302.879 104.26C297.013 108.073 289.093 109.98 279.119 109.98C271.639 109.98 265.479 108.66 260.639 106.02C255.799 103.233 253.379 99.64 253.379 95.24C253.379 92.3067 254.479 89.8867 256.679 87.98C258.879 85.9267 261.593 84.9 264.819 84.9C267.313 84.9 269.806 85.4133 272.299 86.44C269.806 88.3467 268.559 91.4267 268.559 95.68C268.559 98.6133 269.586 100.887 271.639 102.5C273.693 104.113 276.186 104.92 279.119 104.92C282.493 104.92 285.353 104.04 287.699 102.28C290.193 100.52 291.439 98.0267 291.439 94.8C291.439 91.72 290.193 89.3 287.699 87.54C285.353 85.6333 281.613 83.4333 276.479 80.94C271.786 78.74 267.973 76.76 265.039 75C262.253 73.0933 259.833 70.6 257.779 67.52C255.726 64.44 254.699 60.7 254.699 56.3C254.699 49.7 257.486 44.4933 263.059 40.68C268.633 36.8667 275.673 34.96 284.179 34.96C291.659 34.96 297.746 36.3533 302.439 39.14C307.279 41.9267 309.699 45.52 309.699 49.92C309.699 53.2933 308.673 55.7867 306.619 57.4C304.566 59.0133 301.926 59.82 298.699 59.82C295.619 59.82 292.906 59.16 290.559 57.84C293.199 55.3467 294.519 52.1933 294.519 48.38C294.519 45.8867 293.566 43.9067 291.659 42.44C289.753 40.8267 287.259 40.02 284.179 40.02C280.806 40.02 278.166 40.9733 276.259 42.88C274.353 44.7867 273.399 47.1333 273.399 49.92Z" stroke="white" stroke-width="1"/>
+                <path d="M334.812 109.98C328.799 109.98 324.472 108.66 321.832 106.02C319.192 103.233 317.872 98.76 317.872 92.6V45.96H306.872C306.872 43.4667 307.019 41.8533 307.312 41.12C307.605 40.3867 308.485 39.8 309.952 39.36C314.792 38.04 318.605 35.9867 321.392 33.2C324.179 30.4133 326.452 26.38 328.212 21.1C328.652 19.4867 329.385 18.5333 330.412 18.24C331.439 17.8 333.932 17.58 337.892 17.58V37.38H355.932C355.932 39.2867 355.639 41.0467 355.052 42.66C354.465 44.1267 353.659 45.2267 352.632 45.96H337.892V95.46C337.892 99.86 339.725 102.06 343.392 102.06C345.005 102.06 346.765 101.547 348.672 100.52C350.725 99.4933 352.559 98.1 354.172 96.34L355.932 98.54C349.625 106.167 342.585 109.98 334.812 109.98Z" stroke="white" stroke-width="1"/>
+                <path d="M377.119 95.46C377.119 99.86 378.512 102.06 381.299 102.06C384.086 102.06 386.799 100.96 389.439 98.76L391.199 100.96C385.772 106.973 379.392 109.98 372.059 109.98C366.779 109.98 362.966 108.66 360.619 106.02C358.272 103.233 357.099 98.76 357.099 92.6V49.04C357.099 46.9867 356.146 45.96 354.239 45.96H347.419L346.759 43.54C349.692 41.0467 353.359 38.9933 357.759 37.38C362.159 35.7667 366.559 34.96 370.959 34.96C372.719 34.96 374.186 35.4 375.359 36.28C376.532 37.16 377.119 38.3333 377.119 39.8V95.46ZM354.899 13.84C354.899 11.2 356.366 8.26666 359.299 5.04C362.232 1.81333 364.946 0.199997 367.439 0.199997C370.079 0.199997 372.866 1.81333 375.799 5.04C378.879 8.26666 380.419 11.2 380.419 13.84C380.419 16.6267 378.879 19.6333 375.799 22.86C372.866 25.94 370.079 27.48 367.439 27.48C364.946 27.48 362.232 25.94 359.299 22.86C356.366 19.6333 354.899 16.6267 354.899 13.84Z" stroke="white" stroke-width="1"/>
+                <path d="M408.12 59.38C405.04 61.14 401.374 62.02 397.12 62.02C394.04 62.02 391.62 61.14 389.86 59.38C388.1 57.4733 387.22 54.8333 387.22 51.46C387.22 46.4733 389.64 42.5133 394.48 39.58C399.467 36.5 405.92 34.96 413.84 34.96C423.227 34.96 430.56 37.0133 435.84 41.12C441.267 45.2267 443.98 50.8 443.98 57.84V95.9C443.98 100.007 445.447 102.06 448.38 102.06C451.167 102.06 453.88 100.96 456.52 98.76L458.28 100.96C452.854 106.973 446.4 109.98 438.92 109.98C434.52 109.98 431.147 108.88 428.8 106.68C426.6 104.48 425.28 101.033 424.84 96.34H423.96C421.614 100.593 418.46 103.967 414.5 106.46C410.687 108.807 406.287 109.98 401.3 109.98C395.727 109.98 391.253 108.293 387.88 104.92C384.507 101.4 382.82 96.8533 382.82 91.28C382.82 84.9733 385.827 79.9867 391.84 76.32C397.853 72.6533 405.993 70.82 416.26 70.82C418.167 70.82 420.88 70.9667 424.4 71.26V60.26C424.4 53.0733 423.52 47.94 421.76 44.86C420 41.6333 417.14 40.02 413.18 40.02C410.394 40.02 408.194 40.9 406.58 42.66C404.967 44.42 404.16 46.6933 404.16 49.48C404.16 53.88 405.48 57.18 408.12 59.38ZM411.42 98.98C420.073 98.98 424.4 91.1333 424.4 75.44C417.067 75.44 411.567 76.6867 407.9 79.18C404.234 81.5267 402.4 84.9 402.4 89.3C402.4 92.2333 403.207 94.58 404.82 96.34C406.433 98.1 408.633 98.98 411.42 98.98Z" stroke="white" stroke-width="1"/>
+                <path d="M526.532 95.46C526.532 99.86 527.925 102.06 530.712 102.06C533.498 102.06 536.212 100.96 538.852 98.76L540.612 100.96C535.185 106.973 528.805 109.98 521.472 109.98C516.192 109.98 512.378 108.66 510.032 106.02C507.832 103.233 506.732 98.76 506.732 92.6V58.94C506.732 50.4333 504.018 46.18 498.592 46.18C493.312 46.18 488.985 49.7733 485.612 56.96C482.385 64.1467 480.772 73.5333 480.772 85.12C480.772 89.52 481.138 93.1133 481.872 95.9C482.605 98.54 483.778 101.107 485.392 103.6L487.152 105.8L485.392 108H453.492L452.172 104.26L455.252 103.6C457.598 103.013 459.138 102.133 459.872 100.96C460.605 99.64 460.972 97.1467 460.972 93.48V50.58C460.972 47.7933 460.018 46.4 458.112 46.4H451.072L450.412 43.98C453.345 41.4867 457.012 39.4333 461.412 37.82C465.812 36.2067 470.212 35.4 474.612 35.4C476.518 35.4 477.985 35.84 479.012 36.72C480.185 37.6 480.772 38.7733 480.772 40.24V59.16C482.825 52.2667 486.492 46.5467 491.772 42C497.052 37.3067 502.625 34.96 508.492 34.96C514.798 34.96 519.345 37.0133 522.132 41.12C525.065 45.2267 526.532 51.7533 526.532 60.7V95.46Z" stroke="white" stroke-width="1"/>
+                <path d="M707.894 7.67999C704.228 10.4667 701.514 13.1067 699.754 15.6C697.994 17.9467 696.381 21.1 694.914 25.06L667.194 108H648.274L629.574 46.18L611.094 108H591.954L563.794 25.06C562.328 20.9533 560.714 17.8 558.954 15.6C557.341 13.2533 554.701 10.6133 551.034 7.67999L552.794 5.26H592.834L594.154 9.21999L591.074 10.1C588.874 10.8333 587.261 11.7867 586.234 12.96C585.354 13.9867 584.914 15.4533 584.914 17.36C584.914 18.8267 585.428 21.1733 586.454 24.4L608.454 89.96L625.394 32.76L622.974 25.06C621.508 20.9533 619.894 17.8 618.134 15.6C616.521 13.2533 613.881 10.6133 610.214 7.67999L611.974 5.26H652.014L653.554 9.21999L650.254 10.1C647.908 10.6867 646.294 11.5667 645.414 12.74C644.534 13.7667 644.094 15.3067 644.094 17.36C644.094 18.8267 644.608 21.1733 645.634 24.4L664.994 90.18L686.774 24.84C687.801 21.6133 688.314 19.1933 688.314 17.58C688.314 15.82 687.801 14.4267 686.774 13.4C685.894 12.2267 684.354 11.3467 682.154 10.76L678.194 9.21999L679.514 5.26H706.134L707.894 7.67999Z" stroke="black" stroke-width="1"/>
+                <path d="M726.412 95.46C726.412 99.86 727.805 102.06 730.592 102.06C733.379 102.06 736.092 100.96 738.732 98.76L740.492 100.96C735.065 106.973 728.685 109.98 721.352 109.98C716.072 109.98 712.259 108.66 709.912 106.02C707.565 103.233 706.392 98.76 706.392 92.6V49.04C706.392 46.9867 705.439 45.96 703.532 45.96H696.712L696.052 43.54C698.985 41.0467 702.652 38.9933 707.052 37.38C711.452 35.7667 715.852 34.96 720.252 34.96C722.012 34.96 723.479 35.4 724.652 36.28C725.825 37.16 726.412 38.3333 726.412 39.8V95.46ZM704.192 13.84C704.192 11.2 705.659 8.26666 708.592 5.04C711.525 1.81333 714.239 0.199997 716.732 0.199997C719.372 0.199997 722.159 1.81333 725.092 5.04C728.172 8.26666 729.712 11.2 729.712 13.84C729.712 16.6267 728.172 19.6333 725.092 22.86C722.159 25.94 719.372 27.48 716.732 27.48C714.239 27.48 711.525 25.94 708.592 22.86C705.659 19.6333 704.192 16.6267 704.192 13.84Z" stroke="black" stroke-width="1"/>
+                <path d="M780.073 34.96C784.766 34.96 788.58 36.3533 791.513 39.14C794.446 41.78 795.913 45.2267 795.913 49.48C795.913 53.44 794.74 56.6667 792.393 59.16C790.046 61.5067 786.966 62.68 783.153 62.68C780.22 62.68 777.506 62.0933 775.013 60.92C777.653 58.72 778.973 55.42 778.973 51.02C778.973 48.9667 778.533 47.3533 777.653 46.18C776.773 45.0067 775.6 44.42 774.133 44.42C770.613 44.42 767.68 48.0133 765.333 55.2C762.986 62.24 761.813 71.04 761.813 81.6C761.813 87.0267 762.106 91.3533 762.693 94.58C763.426 97.8067 764.6 100.813 766.213 103.6L767.973 105.8L766.213 108H734.313L732.993 104.26L736.073 103.6C738.42 103.013 739.96 102.133 740.693 100.96C741.426 99.64 741.793 97.1467 741.793 93.48V50.58C741.793 47.7933 740.84 46.4 738.933 46.4H732.113L731.233 43.98C734.02 41.4867 737.466 39.4333 741.573 37.82C745.826 36.2067 750.006 35.4 754.113 35.4C756.02 35.4 757.56 35.84 758.733 36.72C759.906 37.6 760.493 38.7733 760.493 40.24V56.3H761.153C764.233 42.0733 770.54 34.96 780.073 34.96Z" stroke="black" stroke-width="1"/>
+                <path d="M813.157 109.98C807.144 109.98 802.817 108.66 800.177 106.02C797.537 103.233 796.217 98.76 796.217 92.6V45.96H785.217C785.217 43.4667 785.364 41.8533 785.657 41.12C785.951 40.3867 786.831 39.8 788.297 39.36C793.137 38.04 796.951 35.9867 799.737 33.2C802.524 30.4133 804.797 26.38 806.557 21.1C806.997 19.4867 807.731 18.5333 808.757 18.24C809.784 17.8 812.277 17.58 816.237 17.58V37.38H834.277C834.277 39.2867 833.984 41.0467 833.397 42.66C832.811 44.1267 832.004 45.2267 830.977 45.96H816.237V95.46C816.237 99.86 818.071 102.06 821.737 102.06C823.351 102.06 825.111 101.547 827.017 100.52C829.071 99.4933 830.904 98.1 832.517 96.34L834.277 98.54C827.971 106.167 820.931 109.98 813.157 109.98Z" stroke="black" stroke-width="1"/>
+            </svg>
+        </div>        
+        <p>A technical demo</p>
+        <div class="curve2"></div>
+    </div>
+
+    <!--Top of page-->
+    <div class="wrapper">
+        <div class="row">
+            <div class="dark-mode info-block black-mode cherry-tree">
+                <img src="images/webDev.svg" width="150px" height="150px"/>
+                <button class="dark-mode black-mode info-button">Development</button>
+            </div>
+            <div class="dark-mode info-block black-mode cherry-tree">
+                <img src="images/fitness.svg" height="150px" width="150px"/>
+                <button class="dark-mode black-mode info-button">Fitness</button>
+            </div>
+            <div class="dark-mode black-mode info-block cherry-tree">
+                <img src="images/food.svg" height="150px" width="150px"/>
+                <button class="dark-mode black-mode info-button">Food</button>
+            </div>
+        </div>
+        
+        <hr id="whereIBegan">
+
+        <!--Where I Began section-->
+        <div id="begin-block" class="start-row black-mode dark-mode padding-0">
+            <div id="begin-text" class="start-text col-lg white-mode dark-mode">
+                <div id="freshman" class="d-block">
+                    <h1>Where I Began</h1>
+                    <p>
+                        Ever since 6th grade, I've loved to mess around with technology.
+                        I used to love pushing the boundaries and modding my Xbox 360,
+                        my ipod, and making changes that nobody else had access to. I would
+                        find glitches in video games and install other creators' mods to
+                        1-up my friends.
+                        <br><br>
+
+                        When I learned to code with Python my freshman year of college,
+                        I felt like it was too much to learn, and I was overwhelmed by
+                        all of the information. But as I went through my degree, I stuck
+                        with it, and it definitely paid off.
+                    </p>    
+                </div>
+                <div id="sophomore" class="v-hidden">
+                    <h1>Second Year of College</h1>
+                    <p>
+                        After scraping the surface of coding with Python, I learned Java. That same year,
+                        I learned about how operating sytems work, Unix command prompt, computer organization, 
+                        and computer graphics with WebGL. I also learned some other subjects like calculus 2, 
+                        discrete structures, and physics.
+                        <br><br>
+
+                        To top it off, I was working for IT at my school as a support technician and learning about computer software,
+                        hardware repairs, OS imaging, and creating batch scripts.
+                    </p>    
+                </div>
+                <div id="junior" class="v-hidden">
+                    <h1>Junior Year</h1>
+                    <p>
+                        This was a big year for me, as I finally started as an assistant web dev.
+                        Now that I was working for IT as a technician and as a developer, 
+                        I was bettering my skills with HTML, Bootstrap, JQuery, C#, ASP.NET Core,
+                        SQL Server Management Studio, and LINQ queries. 
+                        <br><br>
+                        
+                        In class, I was being taught about android apps/programming, CPU architecture, 
+                        and parallel computing. It was also during this year that I took a database 
+                        programming class and created my senior capstone -- a compiler in the C language. 
+                    </p>    
+                </div>
+                <div id="senior" class="v-hidden">
+                    <h1>Being a Senior</h1>
+                    <p>
+                        During the final year of college, I was able to relax a bit, but I spent most
+                        of my time looking for jobs in the web development field. I searched for a good amount of time,
+                        but I wasn't having much luck, so I focused on bettering my skills at my jobs on campus.                           
+                        <br><br>
+
+                        I also was focused on my relationships with my brothers/best-friends
+                        in my Fraternity as the Vice President. While working on my classwork for courses like
+                        differential equations, networking, and my second senior capstone in software engineering,
+                        I took an even deeper interest in my future as an aspiring web developer.
+                    </p>    
+                </div>
+                <div id="grapecity" class="v-hidden">
+                    <h1>GrapeCity</h1>
+                    <p>
+                        After graduating during the 2020 pandemic, I continued working for IT at my university 
+                        for a few months until I randomly took a job as an estimator at a local cabinet business. 
+                        I didn't feel fulfilled, I hated my job, and I quickly fell into a depression after 
+                        a breakup with my girlfriend at the time.
+                        <br><br>
+
+                        After a few months of continuing job apps, the light shined through and I got a call
+                        for an interview with a company named GrapeCity. They wanted me to be a "Technical Engagement Engineer," 
+                        which basically meant I would help product customers with their web development coding issues. It was here
+                        where I got serious about learning .NET, bettering my HTML and C# skills,
+                        as well as learning Vanilla JS and CSS without any frameworks.
+                    </p>    
+                </div>
+                <div id="recent-life" class="v-hidden">
+                    <h1>Life since 2021</h1>
+                    <p>
+                        Since getting hired as an ActiveReports.NET Technical Engagement Engineer
+                        for GrapeCity, I've since taken multiple long-haul courses on Udemy bettering my skills
+                        in HTML, CSS, JavaScript, React, and C#. Because our customers use a variety
+                        of different tech stacks in their code, I was able to gain experience with
+                        lots of different apps, technologies, and tools -- I've worked with ASP.NET 
+                        5 and 6, Winforms, WPF apps using C# and VB.NET.
+                        <br><br>
+                        Around March 2022, I had the opportunity to transfer to the ActiveReportsJS
+                        product within that same company -- basically the same product, but aimed
+                        at front-end applications that use remote JSON data for their reporting needs.
+                        With this, I was able to learn about React and Angular, write technical
+                        pieces on a few frameworks and prevelant coding questions, and get
+                        more familiar with REST and OData endpoints.
+                    </p>    
+                </div>
+                
+            </div>
+            <!-- <div class="col"> -->
+                <ul id="start-list" class="col cherry-tree start-list black-mode dark-mode underline-hover">
+                    <li id="freshman-li" class="active"><a href="javascript:changeTab('freshman');">Freshman</a></li>
+                    <li id="sophomore-li"><a href="javascript:changeTab('sophomore');" >Sophomore</a></li>
+                    <li id="junior-li"><a href="javascript:changeTab('junior');">Junior</a></li>
+                    <li id="senior-li"><a href="javascript:changeTab('senior');">Senior</a></li>
+                    <li id="grapecity-li"><a href="javascript:changeTab('grapecity');">GrapeCity</a></li>
+                    <li id="recent-life-li"><a href="javascript:changeTab('recent-life');">Recent Life</a></li>
+                </ul>
+            <!-- </div> -->
+        </div>
+
+        <!-- <hr id="myExperience"> -->
+
+    </div>  
+
+
+
+    <!--My Experience section-->
+    <div id="experience" class="dark-mode black-mode experience-div">
+        <div class="curve1"></div>
+        <div class="experience-svg-div" id="myDevExperience">
+            <h1>My Dev Experience</h1>
+            <div style="max-width: 500px; max-height: 500px;">
+                <img src="images/design.svg" width="100%">
+            </div>
+        </div>
+        <div id="resume" onClick="resumeClick()" class="resume">
+            <img width="100%" height="100%" src="images/resume.svg">         
+        </div>       
+        <div class="curve2"></div>
+    </div>
+
+    <hr id="website" style="display: none;">
+
+    <div class="wrapper">
+        <div class="dark-mode black-mode info-block">
+            <h1>How was this website made?</h1>
+            <p>This page was made with HTML5, CSS3, and Vanilla JS on the front end.
+                I wanted to make something that looks beautiful without the use of many
+                front-end frameworks or libaries.
+                In the backend, the site is using Mongoose to hook up
+                a MongoDB collection. I am using Express.js to route
+                to various REST API endpoints.
+            </p>
+            <br>
+            <p>
+                If you add /users to the base URL of this site, 
+                you can get a full list of users that have been created in my DB.
+                If you want to test out some parameters, you can go navigate to /user/:id to
+                see if a user exists with a certain id. 
+            </p>
+        </div>
+
+        <hr id="createUser">
+
+        <!-- Create a user -->
+        <div class="create-user-row dark-mode black-mode">
+            <div class="create-user dark-mode black-mode">
+                <h1>Create A User</h1>
+                <form class="flex-column-left" action="/" method="post" onsubmit="return validateForm(1)">
+                    <!-- <label for="id">Id:</label> -->
+                    <div class="row">
+                        <div>
+                            <label for="id">Id</label>
+                            <input class="" type="number" id="id1" name="id" placeholder="Enter an Id" required>
+                        </div>
+                        <div>
+                            <label for="name">Full Name</label>
+                            <input class="" type="text" id="name1" name="name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="row form-row-2">
+                        <div id="radio">            
+                            <input type="radio" id="isAdminTrue1" name="isAdmin" value="true">
+                            <label for="isAdminTrue">True</label>
+                            <input type="radio" id="isAdminFalse1" name="isAdmin" value="false" required>
+                            <label for="isAdminFalse">False</label>
+                        </div>
+                        <button class="submit-button dark-mode white-mode" type="submit">Submit</button>
+                    </div>
+                </form>    
+            </div>
+            <div class="create-user dark-mode white-mode">
+                <h1>Update A User</h1>
+                <form class="flex-column-left" method="POST" action="/?_method=PUT" onsubmit="return validateForm(2)">
+                    <input type="hidden" name="_method" value="put">
+                    <!-- <label for="id">Id:</label> -->
+                    <div class="row">
+                        <div>
+                            <label for="id">Current Id</label>
+                            <input class="" type="number" id="id2" name="id" placeholder="Enter an Id" required>
+                        </div>
+                        <div>
+                            <label for="name">Full Name</label>
+                            <input class="" type="text" id="name2" name="name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="row form-row-2">
+                        <div id="radio">            
+                            <input type="radio" id="isAdminTrue2" name="isAdmin" value="true">
+                            <label for="isAdminTrue">True</label>
+                            <input type="radio" id="isAdminFalse2" name="isAdmin" value="false" required>
+                            <label for="isAdminFalse">False</label>
+                        </div>
+                        <button class="submit-button dark-mode black-mode" type="submit">Submit</button>
+                    </div>
+                </form>  
+                <!-- <a href="http://localhost:3000/users">See the users JSON data!</a> -->
+            </div>
+        </div>
+        <div class="create-user-row dark-mode black-mode">  
+            <div class="create-user delete-user dark-mode white-mode">
+                <h1>Delete A User</h1>
+                <form class="flex-column-left" method="POST" action="/?_method=DELETE" onsubmit="return validateForm(3)">
+                    <input type="hidden" name="_method" value="delete">
+                    <!-- <label for="id">Id:</label> -->
+                    <div id="delete" class="form-row-2 row">
+                        <div>
+                            <label for="id">Id</label>
+                            <input class="" type="number" id="id3" name="id" placeholder="Enter an Id" required>
+                        </div>
+                        <button class="submit-button dark-mode black-mode" type="submit">Submit</button>
+                    </div>
+                    <!-- <div class="row form-row-2 align-self-end">
+                        <button class="submit-button dark-mode black-mode" type="submit">Submit</button>
+                    </div> -->
+                </form>                  
+            </div>
+            <div class="create-user dark-mode black-mode">
+                <h1>How does this work?</h1>
+                <p>Simply create, update, or delete a user's record by with an id number.
+                    After sucessfully submitting one of the forms, the page should refresh.
+                    You can make sure that the data was added to the site's collection
+                    by adding /user/:id (where :id is the actual number) to the end of this page's URL. 
+                </p>
+            </div>
+        </div>
+
+        <hr>
+            
+        <!-- Clock section -->
+        <div class="dark-mode black-mode cherry-tree info-block">
+            <h1>What Time Is It?</h1>
+            <p id="dateTime"></p>
+        </div>
+
+    </div>
+    
+    <!--Footer-->
+    <div class="footer dark-mode black-mode">
+        <div class="footer-row">
+            <div class="col">
+                <div class="icon-credits">
+                    <span>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span>
+                </div>
+                <ul class="credits">
+                    <li>Copyright 2022</li> 
+                    <li>Christian Wirt</li>
+                    <li>All Rights Reserved</li> 
+                </ul>    
+            </div>
+            <!-- <div class="col">
+                <ul class="footer-links dark-mode black-mode">
+                    <li><a href="https://github.com/christian-wirt" target="_blank"><img src="images/github.svg" alt="Github" width="30" height="30"></a></li>
+                    <li><a href="https://www.facebook.com/christian.wirt/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="30" height="30"></a></li>
+                    <li><a href="https://www.linkedin.com/in/christian-wirt-59107b1a3/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30"></a></li>
+                </ul>
+            </div>     -->
+        </div>
+
+    </div>
+
+    </div>
+    </body>
+    
+    
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</body>
+</html>
+

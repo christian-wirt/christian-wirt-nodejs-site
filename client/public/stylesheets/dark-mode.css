@@ -1,0 +1,207 @@
+/*class needed elements to switch properly*/
+.dark-mode {
+    transition-duration: 0.4s;
+}
+
+.black-mode.experience-div {
+    /* background-image: linear-gradient(135deg, #e6bd8e, #554633); */
+    background: linear-gradient(0deg, rgba(85,70,51,1) 0%, rgba(230,189,142,1) 67%, rgba(230,189,142,1) 100%);
+}
+
+.white-mode.experience-div {
+    background: linear-gradient(0deg, rgba(255,196,245,1) 0%, rgba(169,223,255,1) 67%, rgba(169,223,255,1) 100%);
+}
+
+.black-mode > .curve1::before {
+    background-color: #292929;
+    transition: background-color 0.4s;
+}
+
+.black-mode > .curve1::after {
+    background-color: #e6bd8e;
+    transition: background-color 0.4s;
+}
+
+.black-mode > .curve2::before {
+    background-color: #292929;
+    transition: background-color 0.4s;
+}
+
+.black-mode > .curve2::after {
+    background-color: #554633;
+    transition: background-color 0.4s;
+}
+
+.white-mode > .curve1::before {
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+}
+
+.white-mode >.curve1::after {
+    background-color: #a9dfff;
+    transition: background-color 0.4s;
+}
+
+.white-mode > .curve2::before {
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+}
+
+.white-mode > .curve2::after {
+    background-color: #ffc4f5;
+    transition: background-color 0.4s;
+}
+
+.black-mode > .expand-button {
+    filter: invert(100%) sepia(98%) saturate(8%) hue-rotate(159deg) brightness(102%) contrast(104%);
+}
+
+.white-mode > .expand-button {
+    invert(0%) sepia(3%) saturate(7475%) hue-rotate(293deg) brightness(84%) contrast(101%);
+}
+
+/*------buttons--------*/
+button.black-mode:hover {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+button.white-mode:hover {
+    background-color: #1d1d1d;
+    color: #ececec;
+}
+
+/*---------inputs--------*/
+input.black-mode {
+    background-color: #1d1d1d;
+    color: #ececec;
+}
+
+input.white-mode {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+input.black-mode:hover {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+input.white-mode:hover {
+    background-color: #1d1d1d;
+    color: #ececec;
+}
+
+/*------navbar and footer------*/
+.black-mode {
+    background-color: #1d1d1d;
+    color: #ececec;
+}
+
+.white-mode {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+/*-----------------------------*/
+.header.white-mode {
+    background-image: linear-gradient(180deg, #a9dfff, #ffc4f5);
+}
+
+.header.black-mode {
+    background-image: linear-gradient(180deg, #e6bd8e, #554633);
+}
+
+/*------body------*/
+body.black-mode {
+    background-color: #292929;
+    color: #ececec;
+}
+
+body.white-mode {
+    background-color: #ffffff;
+    color: #1d1d1d;
+}
+/*---------------*/
+
+/*------blocks of info------*/
+/* .info-block.black-mode:hover {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+.info-block.white-mode:hover {
+    background-color: #1d1d1d;
+    color: #ececec;
+} */
+
+.info-button.black-mode {
+    border: 1px solid white;
+}
+
+.info-button.white-mode {
+    border: 1px solid black;
+}
+
+.submit-button.black-mode {
+    border: 1px solid white;
+}
+
+.submit-button.white-mode {
+    border: 1px solid black;
+}
+
+/* .info-block.black-mode {
+    border: #ececec solid 1px;
+}
+
+.info-block.white-mode {
+    border: #1d1d1d solid 1px;
+} */
+
+/*------lists------*/
+
+/* .navbar.black-mode > li {
+    border: #ececec solid 1px;
+}
+
+.navbar.white-mode > li {
+    border: #1d1d1d solid 1px;
+} */
+
+ul.black-mode > li {
+    color: #ececec;
+}
+
+/* ul.black-mode > li:hover {
+    background-color: #ececec;
+    color: rgb(0, 0, 0);
+} */
+
+ul.white-mode > li {
+    color: rgb(0, 0, 0);
+}
+
+/* ul.white-mode > li:hover {
+    background-color: #1d1d1d;
+    color: #ececec;
+} */
+
+@media screen and (max-width: 768px) {
+
+    .navbar.white-mode > li, .navbar.black-mode > li {
+        border: none;
+    }
+
+}
+/*----------------*/
+
+/*------start list block------*/
+.start-list.black-mode > li.active {
+    background-color: #ececec;
+    color: #1d1d1d;
+}
+
+.start-list.white-mode > li.active {
+    background-color: #1d1d1d;
+    color: #ececec;
+}
